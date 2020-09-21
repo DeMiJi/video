@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cap.dao.VideoMapper">
+
+    <select id="queryList" resultType="Video">
+        select * from video;
+    </select>
+
+    <select id="Videotop10" resultType="Videotop10">
+        select Video_Name,PlaySum from video order by PlaySum desc limit 0, 3;
+    </select>
+
+    <select id="VideoType" resultType="VideoType">
+        SELECT SUM(PlaySum) AS value, Video_Type AS name FROM video GROUP BY Video_Type
+    </select>
+</mapper>

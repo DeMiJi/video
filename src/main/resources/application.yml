@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.112.204.159/bili?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: Desiy869!
+mybatis:
+  type-aliases-package: com.cap.entity
+  mapper-locations: classpath:mapper/**.xml
+server:
+  port: 9000
